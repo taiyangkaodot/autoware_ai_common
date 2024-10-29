@@ -22,7 +22,7 @@ macro(AW_CHECK_CUDA)
             AND NOT ${CUDA_VERSION} VERSION_EQUAL "12.0" )
       message(FATAL_ERROR "GPU support on Melodic requires CUDA<=12.0")
     endif()
-    if(${CUDA_VERSION} VERSION_GREATER 9.1"
+    if(${CUDA_VERSION} VERSION_GREATER "9.1"
           AND ${CMAKE_VERSION} VERSION_LESS "3.12.3")
       unset(CUDA_cublas_device_LIBRARY CACHE)
       set(CUDA_cublas_device_LIBRARY ${CUDA_cublas_LIBRARY})
